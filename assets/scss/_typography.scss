@@ -4,7 +4,7 @@ small, time, ol, ul, li, button {
 	font-family: $poppins;
 	font-size: 1rem;
 	font-weight: $regular;
-	color: $grey;
+	color: $primary-text-color;
 }
 
 small { font-size: 0.875rem; }
@@ -17,8 +17,8 @@ a {
 }
 
 p {
-	margin-top: 1.25rem;
-	margin-bottom: 1.25rem;
+	margin-top: 1.2rem;
+	margin-bottom: 1.2rem;
 }
 
 // button style reset
@@ -36,12 +36,12 @@ button {
 
 h1, h2, h3,
 h4, h5, h6 {
-	margin-top: 1.85rem;
-	margin-bottom: 1.25rem;
-	font-family: $lato;
-	font-weight: 900;
+	margin-top: 2.15rem;
+	margin-bottom: 1.2rem;
+	font-family: $roboto;
+	font-weight: $bold;
 	line-height: 1.2;
-	color: $grey;
+	color: $primary-text-color;
 }
 
 h1, #h1 { font-size: fluid-text(414px, 40px, 860px, 48px); }

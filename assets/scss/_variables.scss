@@ -1,22 +1,25 @@
-// Background Colors
-$primary-background: #20262E;
-
 // Theme Colors
 $white: #FFF;
 $black: #000;
-$light-black: #393E46;
-$dark-grey: #3E3E3E;
-$grey: #F4F4F4;
+
+// Primary background/foreground colors
+$background-blue: #0A192F;
+$foreground-blue: #172A46;
+
+// Text colors
+$primary-text-color: #CCD6F6;
+$secondary-text-color: #616E8A;
 
 // Fonts
 $poppins: 'Poppins', sans-serif;
-$lato: 'Lato', sans-serif;
+$roboto: 'Roboto', sans-serif;
 
 // Weights
 $regular: 400;
 $semibold: 600;
+$bold: 700;
 
-// Consistency Utilities
+// Consistency utilities
 $radius-small: 5px;
 $radius-medium: 10px;
 $radius-large: 20px;

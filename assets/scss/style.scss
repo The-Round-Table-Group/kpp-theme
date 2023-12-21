@@ -2,9 +2,9 @@
     Theme Name: KPP Theme
     Author: Shane Schroll
     Author URI: https://trt.group
-    Description: Custom theme for Kash Patel.
+    Description: Custom theme for Kash.
     Text Domain: kpp
-    Version: 1.0.0
+    Version: 1.0.1
 */
 
 // Import dependencies
@@ -16,6 +16,7 @@
 
 // Import Template Partials
 @import 'partials/navigation';
+@import 'partials/home-header';
 @import 'partials/header';
 @import 'partials/footer';
 

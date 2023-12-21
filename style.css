@@ -2,9 +2,9 @@
     Theme Name: KPP Theme
     Author: Shane Schroll
     Author URI: https://trt.group
-    Description: Custom theme for Kash Patel.
+    Description: Custom theme for Kash.
     Text Domain: kpp
-    Version: 1.0.0
+    Version: 1.0.1
 */
 html {
   line-height: 1.15;
@@ -171,21 +171,21 @@ body {
   overflow-x: hidden;
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum" 1;
-  background-color: #20262E;
+  background-color: #0A192F;
 }
 
 ::-moz-placeholder {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #3E3E3E;
+  color: #616E8A;
 }
 
 ::placeholder {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #3E3E3E;
+  color: #616E8A;
 }
 
 img {
@@ -211,7 +211,7 @@ small, time, ol, ul, li, button {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #F4F4F4;
+  color: #CCD6F6;
 }
 
 small {
@@ -228,8 +228,8 @@ a:hover {
 }
 
 p {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 button {
@@ -247,12 +247,12 @@ button:hover {
 
 h1, h2, h3,
 h4, h5, h6 {
-  margin-top: 1.85rem;
-  margin-bottom: 1.25rem;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
+  margin-top: 2.15rem;
+  margin-bottom: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
   line-height: 1.2;
-  color: #F4F4F4;
+  color: #CCD6F6;
 }
 
 h1, #h1 {

@@ -8,14 +8,14 @@ body {
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
 	font-feature-settings: "lnum" 1;
-    background-color: $primary-background;
+    background-color: $background-blue;
 }
 
 ::placeholder {
     font-family: $poppins;
     font-size: 1rem;
     font-weight: $semibold;
-    color: $dark-grey;
+    color: $secondary-text-color;
 }
 
 img {
