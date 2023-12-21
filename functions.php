@@ -55,12 +55,13 @@ class KPPSite extends Timber\Site {
 	function enqueue_scripts() {
 		$version = filemtime( get_stylesheet_directory() . '/style.css' );
 		wp_enqueue_style( 'srs-css', get_stylesheet_directory_uri() . '/style.css', [], $version );
+        wp_enqueue_script( 'aos', get_template_directory_uri() . '/assets/js/packages/aos.js', [], '3.0.0' );
 
         if ( ! is_front_page() ) {
-            wp_enqueue_script( 'srs-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery'], $version );
+            wp_enqueue_script( 'srs-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos'], $version );
         } else {
             wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/packages/swiper.js', [], '11.0.5' );
-            wp_enqueue_script( 'srs-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'swiper'], $version );
+            wp_enqueue_script( 'srs-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos', 'swiper'], $version );
         }
 
         // remove inline wp styles from frontend

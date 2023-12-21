@@ -4,7 +4,7 @@
     Author URI: https://trt.group
     Description: Custom theme for Kash.
     Text Domain: kpp
-    Version: 1.0.2
+    Version: 1.0.3
 */
 
 // Import dependencies
@@ -19,6 +19,9 @@
 @import 'partials/home-header';
 @import 'partials/header';
 @import 'partials/footer';
+
+// Import extra packages
+@import 'packages/aos';             // Animate on Scroll library for animating items into the viewport
 
 // Import components
 @import 'components/component-loader';

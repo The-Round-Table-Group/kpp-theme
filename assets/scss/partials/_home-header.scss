@@ -11,6 +11,37 @@
 
     .text-overlay {
         position: absolute;
+        max-width: 48rem;
+        top: 30%;
+        left: 3.5rem;
+        transform: translateY(-50%);
+
+        .pre-title,
+        .main-title,
+        .sub-paragraph {
+            font-family: $roboto;
+            color: $white;
+            text-shadow: 0 0 6px rgba($black, 0.8);
+        }
+
+        .pre-title,
+        .sub-paragraph {
+            font-weight: $regular;
+        }
+
+        .pre-title {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .main-title {
+            font-size: 4rem;
+        }
+
+        .sub-paragraph {
+            font-size: 1.1rem;
+        }
     }
 }
 
@@ -70,9 +101,10 @@
     .swiper-pagination {
         display: block;
         position: absolute;
+        max-width: 10rem;
         top: 1rem;
         left: unset;
-        right: -6rem;
+        right: -1.5rem;
         font-size: 0;
 
         .swiper-pagination-total {
@@ -83,10 +115,40 @@
             font-family: $roboto;
             font-weight: $bold;
             font-size: 3.25rem;
-            text-decoration: underline 4px $white;
+            text-decoration: underline 4px $primary-text-color;
             text-underline-offset: 10px;
-            color: $white;
+            color: $primary-text-color;
             &:before { content: '0'; }
+        }
+    }
+
+    .swiper-play-button,
+    .swiper-pause-button {
+        position: relative;
+        top: 2rem;
+        left: 1.5rem;
+
+        > span {
+            font-size: 2.5rem;
+            margin-left: 1.25rem;
+        }
+    }
+
+    .btn-active {
+        span {
+            color: #1499f1;
+        }
+    }
+
+    .autoplay-progress {
+        position: absolute;
+        top: 6rem;
+        left: 3.25rem;
+        font-size: 1.25rem;
+        color: $primary-text-color;
+
+        span {
+            font-size: 1.25rem;
         }
     }
 }
