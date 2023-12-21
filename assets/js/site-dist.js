@@ -1,2 +1,2 @@
-jQuery(document).ready((function(){}));
+jQuery(document).ready((function(){location.pathname.split("/"),"/"==window.location.pathname&&new Swiper(".swiper",{direction:"horizontal",loop:!0,pagination:{el:".swiper-pagination",type:"fraction"},autoplay:{delay:5e3},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})}));
 //# sourceMappingURL=site-dist.js.map

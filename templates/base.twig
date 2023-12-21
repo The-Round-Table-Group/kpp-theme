@@ -15,8 +15,8 @@
 	</head>
 
 	<body data-template="base.twig" class="{{ body_class }}">
-        {% include 'partials/navigation.twig' %}
         {% if not is_front_page %}
+            {% include 'partials/navigation.twig' %}
             {% include 'partials/header.twig' %}
         {% else %}
             {% include 'partials/home-header.twig' %}

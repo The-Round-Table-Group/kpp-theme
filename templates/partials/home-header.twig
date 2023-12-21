@@ -1,1 +1,27 @@
-<header class="home-header"></header>
+<header class="home-header">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            {% for slide in post.meta('slider_slide_group') %}
+                <div class="swiper-slide">
+                    <div class="text-overlay">
+                        <p class="pre-title">{{ slide.pre_title_text }}</p>
+                        <h1 class="main-title">{{ slide.main_title_text }}</h1>
+                        <p class="sub-paragraph">{{ slide.sub_title_paragraph }}</p>
+                    </div>
+
+                    <img
+                        class="slide-image"
+                        src="{{ slide.slide_image.url }}"
+                        alt="{{ slide.slide_image.alt }}"
+                    />
+                </div>
+            {% endfor %}
+        </div> {# /.swiper-wrapper #}
+
+        <div class="slider-navigation">
+            <span class="swiper-pagination"></span>
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+        </div>
+    </div> {# /.swiper #}
+</header>

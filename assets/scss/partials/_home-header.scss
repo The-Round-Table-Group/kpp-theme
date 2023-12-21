@@ -1,0 +1,92 @@
+@import '../packages/swiper';
+
+.swiper {
+    position: relative;
+
+    img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .text-overlay {
+        position: absolute;
+    }
+}
+
+.slider-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 20rem;
+    height: 100vh;
+    background-color: rgba($background-blue, 0.85);
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: unset;
+        border-radius: $circle;
+        color: $primary-text-color;
+
+        &:hover {
+            background-color: $primary-text-color;
+
+            &:after {
+                transition: 0.2s ease-out;
+                color: $background-blue;
+            }
+        }
+
+        &:after {
+            position: relative;
+            transition: 0.2s ease-out;
+            font-weight: 900;
+        }
+    }
+
+    .swiper-button-next {
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 3rem;
+        border: 5px solid $primary-text-color;
+        &:after { left: 0.25rem; }
+    }
+
+    .swiper-button-prev {
+        bottom: 10rem;
+        left: 3rem;
+        padding: 1rem 1.15rem;
+        border: 3px solid $primary-text-color;
+
+        &:after {
+            left: -1px;
+            font-size: 1.15rem;
+        }
+    }
+
+    .swiper-pagination {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: unset;
+        right: -6rem;
+        font-size: 0;
+
+        .swiper-pagination-total {
+            display: none;
+        }
+
+        .swiper-pagination-current {
+            font-family: $roboto;
+            font-weight: $bold;
+            font-size: 3.25rem;
+            text-decoration: underline 4px $white;
+            text-underline-offset: 10px;
+            color: $white;
+            &:before { content: '0'; }
+        }
+    }
+}
