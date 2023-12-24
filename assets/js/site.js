@@ -13,7 +13,7 @@
         });
 
         /**
-         * Setup URL path and full URL variables
+         * Setup path/url variables
          * Add active class to nav menu item based on current url
          * Adjust homepage Swiper settings
         */
@@ -23,7 +23,7 @@
         /**
          * Set active menu item based on URL path
         */
-        if ( path[1] !== '' ) {
+        if (path[1] !== '') {
             $('.nav-menu--link[href^="/' + path[1] + '"]').addClass('active');
         } else {
             $('.home').addClass('active');
@@ -36,7 +36,7 @@
             var play = $('.swiper-play-button');
 
             // autoplay progess container
-            const progressContent = document.querySelector(".autoplay-progress span");
+            const progressContent = document.querySelector('.autoplay-progress span');
 
             // initial play state
             play.addClass('btn-active');
@@ -93,7 +93,7 @@
 		.not('[href="#"]')
 		.not('[href="#0"]')
 		.click(function(event) {
-			if(
+			if (
 				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
 				&& 
 				location.hostname == this.hostname
@@ -101,7 +101,7 @@
 				var target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-				if(target.length) {
+				if (target.length) {
 					event.preventDefault();
 
 					$('html, body').animate({
@@ -111,7 +111,7 @@
 						var $target = $(target);
 						$target.focus();
 
-						if($target.is(":focus")) { // Checking if the target was focused
+						if ($target.is(":focus")) { // Checking if the target was focused
 							return false;
 						} else {
 							$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable

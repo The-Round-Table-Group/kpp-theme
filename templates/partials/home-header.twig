@@ -20,26 +20,33 @@
 
         {# slideshow controls #}
         <div class="slider-navigation">
-            <span class="swiper-pagination"></span>
+            <div class="navigation-inner-wrap">
 
-            <button class="swiper-pause-button" aria-label="Pause slideshow">
-                <span class="fa-regular fa-circle-pause"></span>
-            </button>
+                <div class="control-wrapper no-circle">
+                    <span class="swiper-pagination"></span>
+                </div>
 
-            <button class="swiper-play-button" aria-label="Start/Resume slideshow">
-                <span class="fa-regular fa-circle-play"></span>
-            </button>
+                <button class="swiper-button-prev"></button>
 
-            <button class="swiper-button-prev"></button>
-            <button class="swiper-button-next"></button>
-        </div>
+                <button class="swiper-button-next"></button>
+
+                <button class="swiper-pause-button" aria-label="Pause slideshow">
+                    <span class="fa-solid fa-pause"></span>
+                </button>
+
+                <button class="swiper-play-button" aria-label="Start/Resume slideshow">
+                    <span class="fa-solid fa-play"></span>
+                </button>
+
+                <div class="autoplay-progress">
+                    <span></span>
+                </div>
+
+            </div> {# /.navigation-inner-wrap #}
+        </div> {# /.slider-navigation #}
 
         <button class="open-slider-navigation" aria-label="Toggle slider controls">
             <span class="fa-solid fa-chevron-left"></span>
         </button>
-
-        <div class="autoplay-progress">
-            <span></span>
-        </div>
     </div> {# /.swiper #}
 </header>

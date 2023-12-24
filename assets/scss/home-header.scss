@@ -1,0 +1,221 @@
+@import 'variables';
+@import 'packages/swiper';
+
+.swiper {
+    position: relative;
+
+    img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .text-overlay {
+        position: absolute;
+        max-width: 48rem;
+        top: 30%;
+        left: 3.5rem;
+        transform: translateY(-50%);
+
+        .pre-title,
+        .main-title,
+        .sub-paragraph {
+            font-family: $roboto;
+            color: $white;
+            text-shadow: 0 0 6px rgba($black, 0.8);
+        }
+
+        .pre-title,
+        .sub-paragraph {
+            font-weight: $regular;
+        }
+
+        .pre-title {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .main-title {
+            font-size: 4rem;
+        }
+
+        .sub-paragraph {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+// showcase slideshow controls (closed by default)
+.slider-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 0;
+    height: 100vh;
+    background-color: rgba($background-blue, 0.8);
+    transition: width 0.2s ease-out;
+
+    .navigation-inner-wrap {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 65vh;
+    }
+
+    .control-wrapper {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        border: 4px solid $white;
+        border-radius: $circle;
+        text-align: center;
+
+        &.no-circle { border: unset; }
+    }
+
+    // first item (slide counter)
+    .swiper-pagination {
+        display: block;
+        font-size: 0;
+
+        .swiper-pagination-total {
+            display: none;
+        }
+
+        .swiper-pagination-current {
+            font-family: $roboto;
+            font-weight: $bold;
+            font-size: 3.25rem;
+            text-decoration: underline 4px $primary-text-color;
+            text-underline-offset: 10px;
+            color: $primary-text-color;
+            &:before { content: '0'; }
+        }
+    }
+
+    // next 4 items (stacked in order they appear)
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pause-button,
+    .swiper-play-button {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        margin-top: 0;
+        width: 4rem;
+        height: 4rem;
+        border: 4px solid $white;
+        border-radius: $circle;
+        color: $white;
+        text-align: center;
+
+        &:hover {
+            color: #1499F1;
+            background-color: $white;
+        }
+    }
+
+    // slider direction/movement control specifics
+    .swiper-button-prev,
+    .swiper-button-next {
+        &:after {
+            display: block;
+            font-family: FontAwesome;
+            font-size: 2rem;
+            font-weight: $semibold;
+        }
+    }
+
+    .swiper-button-prev:after {
+        content: '\f30a';
+    }
+
+    .swiper-button-next:after {
+        content: '\f30b';
+    }
+
+    // slider play/pause control specifics
+    .swiper-pause-button,
+    .swiper-play-button {
+        &:hover span { color: #1499F1; }
+
+        span {
+            font-size: 2rem;
+            color: $white;
+        }
+
+        // to visually show whether slider is playing or paused
+        &.btn-active {
+            background-color: $white;
+            span { color: #1499F1; }
+        }
+    }
+
+    // nudge play button right inside circle (visually centered, not true center)
+    .swiper-play-button span { margin-left: 0.35rem; }
+
+    // last item - countdown to slide transition
+    .autoplay-progress {
+        border: 4px solid $white;
+        width: 4rem;
+        height: 4rem;
+        border-radius: $circle;
+        text-align: center;
+        transition: 0.2s ease-out;
+
+        span {
+            display: block;
+            margin-top: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: $semibold;
+            color: $white;
+        }
+    }
+
+    // handled as a js click event, controls the open state adjustments
+    &.navigation-open {
+        width: 7rem;
+        transition: width 0.2s ease-out;
+
+        // transform added here so it does not render on the page initially
+        .navigation-inner-wrap {
+            transform: translateX(-50%);
+        }
+
+        // move this sibling left/right (this is the navigation handle)
+        ~ .open-slider-navigation {
+            right: 7rem; // edge of open menu
+            transition: 0.15s ease-out;
+
+            // flip the chevron to face left/right on click
+            span {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+// button control to open/close the slider
+.open-slider-navigation {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 2rem;
+    height: 3.75rem;
+    background-color: $white;
+    transition: 0.15s ease-in;
+
+    // chevron
+    span {
+        color: $background-blue;
+        font-size: 1.25rem;
+    }
+}
