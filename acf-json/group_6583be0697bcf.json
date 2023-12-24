@@ -19,7 +19,7 @@
             "layout": "block",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 10,
             "collapsed": "field_6583bf6a8cad9",
             "button_label": "Add Row",
             "rows_per_page": 20,
@@ -134,5 +134,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703135041
+    "modified": 1703460232
 }

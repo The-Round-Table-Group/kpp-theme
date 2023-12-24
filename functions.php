@@ -60,6 +60,7 @@ class KPPSite extends Timber\Site {
         if ( ! is_front_page() ) {
             wp_enqueue_script( 'srs-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos'], $version );
         } else {
+            wp_enqueue_style( 'home-header-css', get_stylesheet_directory_uri() . '/home-header.css', [], $version );
             wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/packages/swiper.js', [], '11.0.5' );
             wp_enqueue_script( 'srs-js', get_template_directory_uri() . '/assets/js/site-dist.js', ['jquery', 'aos', 'swiper'], $version );
         }
