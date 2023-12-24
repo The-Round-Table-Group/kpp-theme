@@ -15,15 +15,15 @@
 @import 'typography';               // Sitewide typography: sizing, spacing, initial colors
 
 // Import Template Partials
-@import 'partials/navigation';
-@import 'partials/header';
-@import 'partials/footer';
+@import 'partials/navigation';      // site navigation
+@import 'partials/header';          // site header (home has different header - loaded separately)
+@import 'partials/footer';          // site footer
 
 // Import extra packages
-// @import 'packages/aos';             // Animate on Scroll library for animating items into the viewport
+@import 'packages/aos';             // Animate on Scroll library for animating items into the viewport
 
 // Import components
-@import 'components/component-loader';
+@import 'components/component-loader';  // loads all components
 
 // Import templates
-@import 'templates/template-loader';
+@import 'templates/template-loader';    // loads all template layouts
