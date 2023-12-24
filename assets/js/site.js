@@ -31,9 +31,11 @@
 
         // homepage only
         if (url == '/') {
+            // play/pause buttons
             var pause = $('.swiper-pause-button');
             var play = $('.swiper-play-button');
 
+            // autoplay progess container
             const progressContent = document.querySelector(".autoplay-progress span");
 
             // initial play state
@@ -79,6 +81,10 @@
                 pause.removeClass('btn-active');
             });
         }
+
+        $('.open-slider-navigation').on('click', function() {
+            $('.slider-navigation').toggleClass('navigation-open');
+        });
 
         /**
          * Smooth scroll to anchor links

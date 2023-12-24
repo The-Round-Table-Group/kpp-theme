@@ -18,23 +18,28 @@
             {% endfor %}
         </div> {# /.swiper-wrapper #}
 
+        {# slideshow controls #}
         <div class="slider-navigation">
             <span class="swiper-pagination"></span>
 
-            <button class="swiper-pause-button" title="Pause Slideshow" aria-label="Pause Slideshow">
+            <button class="swiper-pause-button" aria-label="Pause slideshow">
                 <span class="fa-regular fa-circle-pause"></span>
             </button>
 
-            <button class="swiper-play-button" title="Start Slideshow" aria-label="Start Slideshow">
+            <button class="swiper-play-button" aria-label="Start/Resume slideshow">
                 <span class="fa-regular fa-circle-play"></span>
             </button>
 
-            <div class="autoplay-progress">
-                Next slide in: <span></span>
-            </div>
-
             <button class="swiper-button-prev"></button>
             <button class="swiper-button-next"></button>
+        </div>
+
+        <button class="open-slider-navigation" aria-label="Toggle slider controls">
+            <span class="fa-solid fa-chevron-left"></span>
+        </button>
+
+        <div class="autoplay-progress">
+            <span></span>
         </div>
     </div> {# /.swiper #}
 </header>
