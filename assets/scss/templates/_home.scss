@@ -1,3 +1,10 @@
+// 3 recent upcoming events + featured event card
+.upcoming-events {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 // 3 most recent news posts (card-style - no image)
 .recent-news-block {
     display: flex;
@@ -16,7 +23,6 @@
 
             // animate bar width on hover
             .news-card--bar {
-                left: 0;
                 right: 0;
                 width: 100%;
                 transition: 0.2s ease-out;
@@ -45,7 +51,7 @@
         &--bar {
             position: absolute;
             bottom: 0;
-            left: 2rem;
+            right: 2rem;
             height: 8px;
             width: 8rem;
             background-color: $light-blue;

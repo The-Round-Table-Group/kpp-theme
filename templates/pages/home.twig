@@ -2,23 +2,28 @@
 
 {% block content %}
 <section class="content-block">
-    <div>
-        <h2 class="title-separator">Recent News</h2>
-        <section class="recent-news-block">
-            {% for news_post in recent_news %}
-                <a class="recent-news-block__card news-card" href="">
-                    <p class="news-card--category">{{ news_post.terms('news-tax')|join(' &nbsp;|&nbsp; ') }}</p>
-                    <h3 class="news-card--title">{{ news_post.meta('news_post_title') }}</h3>
-                    <p class="news-card--date">{{ news_post.date }}</p>
-                    <div class="news-card--bar"></div>
-                </a>
-            {% endfor %}
-        </section>
-
-        <a class="primary-btn primary-btn--white has-border" href="/news">
-            All News <span class="fa-solid fa-arrow-right"></span>
-        </a>
+    <div class="alt-background first-block">
+        <div class="alt-container">
+            <h2 class="title-separator">Upcoming Events</h2>
+            <section class="upcoming-events-block"></section>
+        </div>
     </div>
+
+    <h2 class="title-separator">Recent News</h2>
+    <section class="recent-news-block">
+        {% for news_post in recent_news %}
+            <a class="recent-news-block__card news-card" href="{{ news_post.link }}">
+                <p class="news-card--category">{{ news_post.terms('news-tax')|join(' &nbsp;|&nbsp; ') }}</p>
+                <h3 class="news-card--title">{{ news_post.meta('news_post_title') }}</h3>
+                <p class="news-card--date">{{ news_post.date }}</p>
+                <div class="news-card--bar"></div>
+            </a>
+        {% endfor %}
+    </section>
+
+    <a class="primary-btn primary-btn--white has-border" href="/news">
+        All News <span class="fa-solid fa-arrow-right"></span>
+    </a>
 
     <div class="alt-background">
         <div class="alt-container">

@@ -2,7 +2,7 @@
 
 $labels = [
 	'name'               => __( 'Events', 'kpp' ),
-	'singular_name'      => __( 'News', 'kpp' ),
+	'singular_name'      => __( 'Event', 'kpp' ),
 	'add_new'            => _x( 'Add Event', 'kpp', ),
 	'add_new_item'       => __( 'Add Event', 'kpp' ),
 	'edit_item'          => __( 'Edit Event', 'kpp' ),

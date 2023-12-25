@@ -35,11 +35,11 @@
             var pause = $('.swiper-pause-button');
             var play = $('.swiper-play-button');
 
-            // autoplay progess container
-            const progressContent = document.querySelector('.autoplay-progress span');
-
             // initial play state
             play.addClass('btn-active');
+
+            // autoplay progess container
+            const progressContent = document.querySelector('.autoplay-progress span');
 
             // setup slideshow
             const swiper = new Swiper('.swiper', {
@@ -81,7 +81,12 @@
                 pause.removeClass('btn-active');
             });
         }
+        // swiper config end
 
+        // slider control initial state
+        $('.slider-navigation').addClass('navigation-open');
+
+        // open/close slider controls
         $('.open-slider-navigation').on('click', function() {
             $('.slider-navigation').toggleClass('navigation-open');
         });

@@ -4,6 +4,17 @@
     font-family: $roboto;
     font-size: 1.125rem;
 
+    span {
+        position: relative;
+        left: 0.25rem;
+        transition: 0.2s ease-out;
+    }
+
+    &:hover {
+        span { left: 0.65rem; }
+    }
+
+    // color specifiers
     &--dark-blue {
         border-color: $background-blue;
     }
@@ -13,30 +24,68 @@
 
     &--white {
         background-color: transparent;
-        color: $white;
+        color: $primary-text-color;
 
         &:hover {
             background-color: $light-blue;
             color: $white;
 
-            span {
-                left: 0.65rem;
-            }
-
-            &.has-border {
-                border-color: $light-blue;
-            }
+            span { color: $white; }
+            &.has-border { border-color: $light-blue; }
         }
 
-        span {
-            position: relative;
-            left: 0.25rem;
-            color: $white;
-            transition: 0.2s ease-out;
+        span { color: $primary-text-color; }
+        &.has-border { border: 2px solid $primary-text-color; }
+    }
+
+    &--solid-white {
+        background-color: $primary-text-color;
+        color: $background-blue;
+
+        span { color: $background-blue; }
+
+        &:hover {
+            background-color: $background-blue;
+            color: $primary-text-color;
+
+            span { color: $primary-text-color; }
+            &.has-border { border-color: $background-blue; }
         }
 
-        &.has-border {
-            border: 2px solid $white;
+        &.has-border { border: 2px solid $primary-text-color; }
+
+    }
+}
+
+// plain text links
+.slide-underline {
+    position: relative;
+    display: block;
+
+    &:after {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: $primary-text-color;
+        transition: width 0.2s ease-out;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+            transition: width 0.25s ease-out;
         }
     }
+}
+
+/** 
+    * can be paired with .slide-underline for non-flex links
+    * used for all paragraph blocks
+*/
+.inline-link {
+    display: inline-block;
+    font-weight: $semibold;
 }

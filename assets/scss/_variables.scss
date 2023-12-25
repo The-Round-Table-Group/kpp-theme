@@ -2,6 +2,9 @@
 $white: #FFF;
 $black: #000;
 $light-blue: #1499F1;
+$light-blue-alt: #008AC3;
+$seafoam: #2D8BA8;
+$gradient: linear-gradient(to right bottom, #2b4c7e, #2d5d97);
 
 // Primary background/foreground colors
 $background-blue: #0A192F;
@@ -9,7 +12,7 @@ $foreground-blue: #172A46;
 
 // Text colors
 $primary-text-color: #CCD6F6;
-$secondary-text-color: #798aaf;
+$secondary-text-color: #798AAF;
 
 // Fonts
 $poppins: 'Poppins', sans-serif;
@@ -21,8 +24,8 @@ $semibold: 600;
 $bold: 700;
 
 // Consistency utilities
-$radius-small: 5px;
-$radius-medium: 10px;
+$radius-small: 7px;
+$radius-medium: 12px;
 $radius-large: 20px;
 $circle: 50%;
 $transition: 0.2s ease-out;
