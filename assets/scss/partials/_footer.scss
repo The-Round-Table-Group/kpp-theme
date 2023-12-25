@@ -23,7 +23,7 @@
 }
 
 .site-footer {
-    padding: 10rem 0 0;
+    padding: 10rem 1rem 0;
     background-color: $foreground-blue;
 
     &__container {
@@ -33,7 +33,6 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-        padding: 0 1rem;
     }
 
     &__policies {
