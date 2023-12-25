@@ -7,7 +7,7 @@
         <section class="recent-news-block">
             {% for news_post in recent_news %}
                 <a class="recent-news-block__card news-card" href="">
-                    <p class="news-card--category">{{ news_post.terms('news-tax')|join(' | ') }}</p>
+                    <p class="news-card--category">{{ news_post.terms('news-tax')|join(' &nbsp;|&nbsp; ') }}</p>
                     <h3 class="news-card--title">{{ news_post.meta('news_post_title') }}</h3>
                     <p class="news-card--date">{{ news_post.date }}</p>
                     <div class="news-card--bar"></div>
@@ -23,7 +23,7 @@
     <div class="alt-background">
         <div class="alt-container">
             <h2 class="title-separator">Kash Crew</h2>
-            <section class="kash-crew-cta-block"></section>
+            <section class="kash-crew-block"></section>
         </div>
     </div>
 </section>
