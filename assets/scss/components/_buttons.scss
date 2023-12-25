@@ -1,0 +1,42 @@
+.primary-btn {
+    display: inline-block;
+    padding: 0.75rem 1.4rem;
+    font-family: $roboto;
+    font-size: 1.125rem;
+
+    &--dark-blue {
+        border-color: $background-blue;
+    }
+
+    &--light-blue {
+    }
+
+    &--white {
+        background-color: transparent;
+        color: $white;
+
+        &:hover {
+            background-color: $light-blue;
+            color: $white;
+
+            span {
+                left: 0.65rem;
+            }
+
+            &.has-border {
+                border-color: $light-blue;
+            }
+        }
+
+        span {
+            position: relative;
+            left: 0.25rem;
+            color: $white;
+            transition: 0.2s ease-out;
+        }
+
+        &.has-border {
+            border: 2px solid $white;
+        }
+    }
+}

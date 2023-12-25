@@ -69,7 +69,7 @@
 
     .control-wrapper {
         position: relative;
-        top: 4rem;
+        top: 2rem;
         left: 50%;
         width: 4rem;
         height: 4rem;
@@ -114,7 +114,7 @@
         text-align: center;
 
         &:hover {
-            color: #1499F1;
+            color: $light-blue;
             background-color: $white;
         }
     }
@@ -141,7 +141,7 @@
     // slider play/pause control specifics
     .swiper-pause-button,
     .swiper-play-button {
-        &:hover span { color: #1499F1; }
+        &:hover span { color: $light-blue; }
 
         span {
             font-size: 2rem;
@@ -151,7 +151,7 @@
         // to visually show whether slider is playing or paused
         &.btn-active {
             background-color: $white;
-            span { color: #1499F1; }
+            span { color: $light-blue; }
         }
     }
 
