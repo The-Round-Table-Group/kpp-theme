@@ -64,18 +64,16 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 65vh;
+        height: 48vh;
     }
 
     .control-wrapper {
         position: relative;
+        top: 4rem;
+        left: 50%;
         width: 4rem;
         height: 4rem;
-        border: 4px solid $white;
-        border-radius: $circle;
         text-align: center;
-
-        &.no-circle { border: unset; }
     }
 
     // first item (slide counter)
@@ -182,6 +180,11 @@
     &.navigation-open {
         width: 7rem;
         transition: width 0.2s ease-out;
+
+        // wrapper for the slider counter control (top)
+        .control-wrapper {
+            transform: translateX(-50%);
+        }
 
         // transform added here so it does not render on the page initially
         .navigation-inner-wrap {
