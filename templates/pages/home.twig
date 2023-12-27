@@ -5,7 +5,38 @@
     <div class="alt-background first-block">
         <div class="alt-container">
             <h2 class="title-separator">Upcoming Events</h2>
-            <section class="upcoming-events-block"></section>
+            <section class="upcoming-events-block">
+                <img
+                    class="event-poster"
+                    src="{{ post.meta('main_event_poster').url }}"
+                    alt="{{ post.meta('main_event_poster').alt }}"
+                />
+
+                <div class="event-list">
+                    {% for event in featured_events %}
+                        <div class="event-list__event">
+                            <div class="event-date">
+                                <p class="h4">{{ event.event_date|date('M') }}</p>
+                                <p class="h4">{{ event.event_date|date('j') }}</p>
+                            </div>
+                            <div>
+                                <p class="h5">{{ event.headline_or_artist }} &mdash; {{ event.event_location }}</p>
+                                <a class="primary-btn primary-btn--solid-white btn-small details" href="{{ event.link }}">Event Details</a>
+                                {% if event.ticket_purchase_option %}
+                                    <a
+                                        class="primary-btn primary-btn--solid-white btn-small"
+                                        href="{{ event.ticket_purchase_link }}"
+                                        target="_blank"
+                                        rel="noopener">
+                                        Buy Tickets
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div> {# end event-list #}
+
+            </section>
         </div>
     </div>
 
@@ -31,5 +62,7 @@
             <section class="kash-crew-block"></section>
         </div>
     </div>
+
+    {# After the Kash Krew section, focus on media and a masonry grid layout #}
 </section>
 {% endblock %}

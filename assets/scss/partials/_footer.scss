@@ -59,8 +59,11 @@
     }
 
     .attribution {
-        max-width: 100%;
-        margin: 0 auto;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin: 0 -50vw;
         padding: 1.25rem;
         text-align: center;
         background-color: $background-blue;

@@ -16,10 +16,20 @@
 
     // color specifiers
     &--dark-blue {
-        border-color: $background-blue;
-    }
+        background-color: $background-blue;
+        color: $primary-text-color;
 
-    &--light-blue {
+        span { color: $primary-text-color; }
+
+        &:hover {
+            background-color: $primary-text-color;
+            color: $background-blue;
+
+            span { color: $background-blue; }
+            &.has-border { border-color: $primary-text-color; }
+        }
+
+        &.has-border { border: 2px solid $background-blue; }
     }
 
     &--white {
@@ -27,11 +37,11 @@
         color: $primary-text-color;
 
         &:hover {
-            background-color: $light-blue;
-            color: $white;
+            background-color: $primary-text-color;
+            color: $background-blue;
 
-            span { color: $white; }
-            &.has-border { border-color: $light-blue; }
+            span { color: $background-blue; }
+            &.has-border { border-color: $primary-text-color; }
         }
 
         span { color: $primary-text-color; }
@@ -53,8 +63,12 @@
         }
 
         &.has-border { border: 2px solid $primary-text-color; }
-
     }
+}
+
+.btn-small {
+    padding: 0.4rem 0.875rem;
+    font-size: 16px;
 }
 
 // plain text links
