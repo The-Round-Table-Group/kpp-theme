@@ -1,14 +1,14 @@
 {
-    "key": "group_6583ca900ce42",
-    "title": "Site Options",
+    "key": "group_659072ab6f5d7",
+    "title": "Footer - General",
     "fields": [
         {
-            "key": "field_6583ca908a9d8",
-            "label": "Meta Description",
-            "name": "meta_description",
+            "key": "field_659072ab9ff1b",
+            "label": "Developed By Logo",
+            "name": "developed_by_logo",
             "aria-label": "",
-            "type": "textarea",
-            "instructions": "Fallback if no SEO description is set for the page.",
+            "type": "image",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,11 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "rows": 4,
-            "placeholder": "",
-            "new_lines": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -28,7 +33,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "site-options"
+                "value": "footer-options"
             }
         ]
     ],
@@ -41,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703965348
+    "modified": 1704000794
 }

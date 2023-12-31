@@ -4,7 +4,7 @@
 <section class="content-block">
     <div class="alt-background first-block">
         <div class="alt-container">
-            <h2 class="title-separator">Upcoming Events</h2>
+            <div class="title-wrap"><h2 class="title-separator">Upcoming Events</h2></div>
             <section class="upcoming-events-block">
                 <img
                     class="event-poster"
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <h2 class="title-separator">Recent News</h2>
+    <div class="title-wrap"><h2 class="title-separator">Recent News</h2></div>
     <section class="recent-news-block">
         {% for news_post in recent_news %}
             <a class="recent-news-block__card news-card" href="{{ news_post.link }}">
@@ -58,11 +58,30 @@
 
     <div class="alt-background">
         <div class="alt-container">
-            <h2 class="title-separator">Kash Crew</h2>
-            <section class="kash-crew-block"></section>
+            <div class="title-wrap"><h2 class="title-separator">Join the Kash Crew</h2></div>
+            <section class="kash-crew-block">
+                <h3>Here's what being part of our crew is all about</h3>
+
+                <div id="kash-krew-tabs">
+                    <ul class="tab-bar-menu">
+                        {% set tab_count = 1 %}
+                        {% for tab in post.kash_krew_tabs %}
+                            <li><a class="tab-name" href="#tab-{{ tab_count }}">{{ tab.tab_name }}</a></li>
+                            {% set tab_count = tab_count + 1 %}
+                        {% endfor %}
+                    </ul>
+
+                    {% set count = 1 %}
+                    {% for tab in post.kash_krew_tabs %}
+                        <div id="tab-{{ count }}" class="tab-content">
+                            <p>{{ tab.tab_content }}</p>
+                        </div>
+                        {% set count = count + 1 %}
+                    {% endfor %}
+                </div>
+
+            </section>
         </div>
     </div>
-
-    {# After the Kash Krew section, focus on media and a masonry grid layout #}
 </section>
 {% endblock %}

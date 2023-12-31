@@ -4,7 +4,7 @@ html { font-size: 16px; }
 
 body {
 	text-rendering: geometricPrecision; // for the fluid-text() function
-	line-height: 1.4;
+	line-height: 1.6;
 	overflow-x: hidden;
 	font-variant-numeric: lining-nums;
 	font-feature-settings: "lnum" 1;
@@ -38,7 +38,27 @@ img {
     margin: 0 auto;
 }
 
+.title-wrap {
+    display: inline-block;
+    position: relative;
+    max-width: 40rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        bottom: 2.75rem;
+        right: 0;
+        height: 30px;
+        width: 12.5rem;
+        background-color: #00648F;
+    }
+}
+
 .title-separator {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
     margin-bottom: 3rem;
 }
 

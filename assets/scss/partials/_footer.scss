@@ -59,6 +59,9 @@
     }
 
     .attribution {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         width: 100vw;
         left: 50%;
@@ -67,5 +70,12 @@
         padding: 1.25rem;
         text-align: center;
         background-color: $background-blue;
+
+        img {
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            max-width: 1rem;
+        }
     }
 }

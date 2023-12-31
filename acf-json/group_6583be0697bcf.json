@@ -1,6 +1,6 @@
 {
     "key": "group_6583be0697bcf",
-    "title": "Home Header Slider",
+    "title": "Home - Header Slider",
     "fields": [
         {
             "key": "field_6583be068cad7",
@@ -134,5 +134,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703460232
+    "modified": 1704000746
 }

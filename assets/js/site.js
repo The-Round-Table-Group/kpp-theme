@@ -31,7 +31,9 @@
 
         // homepage only
         if (url == '/') {
-            // play/pause buttons
+            $('#kash-krew-tabs').tabs(); // initialize tabs (Kash Krew section - homepage)
+
+            // slider play/pause buttons
             var pause = $('.swiper-pause-button');
             var play = $('.swiper-play-button');
 
@@ -97,6 +99,7 @@
         $('a[href*="#"]')
 		.not('[href="#"]')
 		.not('[href="#0"]')
+        .not('[href^="#tab"]')
 		.click(function(event) {
 			if (
 				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 

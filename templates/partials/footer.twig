@@ -1,7 +1,7 @@
 <div class="footer-action-funnel">
     <div class="footer-action-funnel__container">
         <h3>{{ options.cta_title }}</h3>
-        <a class="primary-btn primary-btn--solid-white" href="{{ options.cta_link.url }}">
+        <a class="primary-btn primary-btn--solid-white has-border" href="{{ options.cta_link.url }}">
             {{ options.cta_link.title }} <span class="fa-solid fa-arrow-right"></span>
         </a>
     </div>
@@ -22,7 +22,10 @@
     </div>
 
     <p class="attribution">
-        Designed &amp; Developed by
-        <a class="slide-underline inline-link" href="https://trt.group" target="_blank" rel="noopener">The Round Table Group</a>
+        Designed &amp; Developed by &nbsp;
+        <a class="slide-underline inline-link" href="https://trt.group" target="_blank" rel="noopener">
+            <img src="{{ options.developed_by_logo.url }}" alt="{{ options.developed_by_logo.alt }}" />
+            The Round Table Group
+        </a>
     </p>
 </footer>

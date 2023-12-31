@@ -1,6 +1,6 @@
 {
     "key": "group_658bd12653845",
-    "title": "Event Information",
+    "title": "Events - Event Information",
     "fields": [
         {
             "key": "field_658bd86f30f29",
@@ -241,5 +241,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703669276
+    "modified": 1704000774
 }
