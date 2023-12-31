@@ -1,10 +1,11 @@
-# Editor Config for Consistency
 root = true
 
 [*]
 charset = utf-8
+end_of_line = lf
 indent_style = space
 indent_size = 4
+trim_trailing_whitespace = true
 
 [*.{twig,js,css,scss}]
 insert_final_newline = true
