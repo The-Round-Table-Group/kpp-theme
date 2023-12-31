@@ -53,13 +53,13 @@ img {
         width: 12.5rem;
         background-color: #00648F;
     }
-}
 
-.title-separator {
-    display: inline-block;
-    position: relative;
-    z-index: 5;
-    margin-bottom: 3rem;
+    .title-separator {
+        display: inline-block;
+        position: relative;
+        z-index: 5;
+        margin-bottom: 3rem;
+    }
 }
 
 // full width, alternate background style
@@ -80,4 +80,9 @@ img {
 
 .first-block {
     margin: 0 -50vw 5rem;
+}
+
+.last-alt-block {
+    margin-bottom: 5rem;
+    padding-bottom: 7rem;
 }

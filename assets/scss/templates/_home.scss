@@ -115,8 +115,8 @@
     margin-bottom: 5rem;
 
     h3 {
-        text-align: center;
-        padding-bottom: 4rem;
+        max-width: 48rem;
+        margin: 3rem 0 -2.25rem auto;
     }
 }
 
@@ -148,6 +148,10 @@
             }
         }
 
+        li:last-of-type .tab-name {
+            margin-bottom: 0;
+        }
+
         .ui-tabs-active {
             position: relative;
 
@@ -170,6 +174,7 @@
 
         p {
             margin: 0 0 0 2rem;
+            padding-top: 3.75rem;
         }
     }
 }

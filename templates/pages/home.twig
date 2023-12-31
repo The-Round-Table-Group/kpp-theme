@@ -4,7 +4,10 @@
 <section class="content-block">
     <div class="alt-background first-block">
         <div class="alt-container">
-            <div class="title-wrap"><h2 class="title-separator">Upcoming Events</h2></div>
+            <div class="title-wrap">
+                <h2 class="title-separator">Upcoming Events</h2>
+            </div>
+
             <section class="upcoming-events-block">
                 <img
                     class="event-poster"
@@ -40,7 +43,10 @@
         </div>
     </div>
 
-    <div class="title-wrap"><h2 class="title-separator">Recent News</h2></div>
+    <div class="title-wrap">
+        <h2 class="title-separator">Recent News</h2>
+    </div>
+
     <section class="recent-news-block">
         {% for news_post in recent_news %}
             <a class="recent-news-block__card news-card" href="{{ news_post.link }}">
@@ -56,9 +62,12 @@
         All News <span class="fa-solid fa-arrow-right"></span>
     </a>
 
-    <div class="alt-background">
+    <div class="alt-background last-alt-block">
         <div class="alt-container">
-            <div class="title-wrap"><h2 class="title-separator">Join the Kash Crew</h2></div>
+            <div class="title-wrap">
+                <h2 class="title-separator">Join the Kash Crew</h2>
+            </div>
+
             <section class="kash-crew-block">
                 <h3>Here's what being part of our crew is all about</h3>
 
@@ -81,7 +90,18 @@
                 </div>
 
             </section>
+
+            <a class="primary-btn primary-btn--white has-border" href="/kash-krew">
+                Sign Up Today <span class="fa-solid fa-arrow-right"></span>
+            </a>
+
         </div>
     </div>
+
+    <div class="title-wrap">
+        <h2 class="title-separator">See Our Best Shot</h2>
+    </div>
+
+    <section class="image-gallery-block"></section>
 </section>
 {% endblock %}
